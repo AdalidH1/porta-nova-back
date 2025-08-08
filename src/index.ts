@@ -10,7 +10,7 @@ dotenv.config();
 const app = new Hono();
 
 app.use("*", clerkMiddleware());
-app.use("/static/*", serveStatic({ root: "./" }));
+app.use("/static/*", serveStatic({ root: "./public" }));
 // app.get("/", (c) => {
 //   return c.text("Hello Hono!");
 // });
